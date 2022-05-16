@@ -4,8 +4,10 @@ from i2c_lcd import I2cLcd
 import time
 import utime
   
+#remember to set correct address, possibly 0x27???  
 DEFAULT_I2C_ADDR = 0x3f
 
+#remember for scl and sda to use correct pins or change these values below
 i2c = I2C(0, scl=Pin(9), sda=Pin(8), freq=100000)
 lcd = I2cLcd(i2c ,DEFAULT_I2C_ADDR,2,16)
 lcd.move_to(0,0)
