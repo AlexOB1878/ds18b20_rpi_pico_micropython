@@ -120,3 +120,4 @@ class I2cLcd(LcdApi):
         self.i2c.writeto(self.i2c_addr, bytes([ (byte | MASK_E)]) )
         self.i2c.writeto(self.i2c_addr, bytes([byte]) )
 
+
